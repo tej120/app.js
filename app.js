@@ -19,8 +19,8 @@ app.get("/webhook", (req, res) => {
   }
 });
 
-app.post("/webhook", (req, res) => {
-  console.log("Incoming webhook message:", JSON.stringify(req.body, null, 2));
+app.post('/webhook', (req, res) => {
+  console.log('WEBHOOK HIT':", JSON.stringify(req.body, null, 2));
   res.sendStatus(200);
 });
 
