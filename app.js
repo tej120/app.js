@@ -1,3 +1,8 @@
+
+Vivek Vikram <vikramvivek@meta.com>
+12:04 PM (0 minutes ago)
+to me
+
 import express from "express";
 
 const app = express();
@@ -23,20 +28,20 @@ function makeWebhook(name) {
 
   // POST = the real webhook events
   app.post(`/${name}`, (req, res) => {
-    console.log(`\n========== /${name} ==========)`;
+    console.log(`\n========== /${name} ==========`);
     console.log(JSON.stringify(req.body, null, 2));
     res.sendStatus(200);
   });
 }
 
-makeWebhook("webhook");       // 🔘 APP level
-makeWebhook("waba");          // 🟢 WABA level
-makeWebhook("phonenumber");   // 🔵 PHONE level
+makeWebhook("webhook");      // APP level
+makeWebhook("waba");         // WABA level
+makeWebhook("phonenumber");  // PHONE level
 
 app.get("/", (req, res) => {
   res.send("Webhook app is running");
 });
 
 app.listen(PORT, () => {
-  console.log(`Your service is live on port ${PORT)`);
+  console.log(`Your service is live on port ${PORT}`);
 });
