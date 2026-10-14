@@ -1,8 +1,4 @@
 
-Vivek Vikram <vikramvivek@meta.com>
-12:04 PM (0 minutes ago)
-to me
-
 import express from "express";
 
 const app = express();
